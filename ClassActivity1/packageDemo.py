@@ -21,6 +21,8 @@ _ = ax.legend(
 average_of_y = np.mean(iris.data[:, y_axis]) #average length
 average_of_x = np.mean(iris.data[:, x_axis]) #average width
 ratio = average_of_y / average_of_x #ratio
+print("Average of" , iris.feature_names[y_axis], "= ", average_of_y)
+print("Average of" , iris.feature_names[x_axis], "= ", average_of_x)
 print("Average of" , iris.feature_names[y_axis] , "/ Average of" , iris.feature_names[x_axis] , " = " , ratio)
 
 
