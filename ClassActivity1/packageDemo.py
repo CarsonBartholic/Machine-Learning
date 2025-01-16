@@ -1,5 +1,5 @@
 import matplotlib
-matplotlib.use('TkAgg')  # Or 'Qt5Agg', depending on your environment
+matplotlib.use('TkAgg')  # Gets rid of errors when stopping the program
 
 import numpy as np
 from sklearn.datasets import load_iris 
@@ -24,5 +24,4 @@ ratio = average_of_y / average_of_x #ratio
 print("Average of" , iris.feature_names[y_axis] , "/ Average of" , iris.feature_names[x_axis] , " = " , ratio)
 
 
-# plt.close('all')
 plt.show()
