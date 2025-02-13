@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 # load CSV
-dataSet = pandas.read_csv('dataset.csv',index_col=0)
+dataSet = pandas.read_csv('../dataset.csv',index_col=0)
 
 # Data Preprocessing
 dataSet.rename(index = lambda x: 0 if x.startswith("brca") else 1 if x.startswith("prad") else 2 if x.startswith("luad") else x, inplace=True) # relabels the data set to 0,1,2 based on cancer type

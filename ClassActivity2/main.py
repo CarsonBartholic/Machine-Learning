@@ -6,7 +6,7 @@ from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
 
 # load CSV
-dataSet = pandas.read_csv('dataset.csv')
+dataSet = pandas.read_csv('../dataset.csv')
 
 # Dara Preprocessing
 dataSet = dataSet.drop(columns='Unnamed: 0', axis=1)    # drop index column
