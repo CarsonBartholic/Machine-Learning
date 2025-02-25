@@ -6,7 +6,7 @@ from sklearn.linear_model import Perceptron
 from sklearn.preprocessing import Binarizer
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.feature_selection import SelectKBest
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report
 # Number of features to select
 KVAL = 10000
 
@@ -40,11 +40,15 @@ param_grid = {
     'n_jobs' : [-1]
 }
 
+
+
 perceptronModel = GridSearchCV(Perceptron(), param_grid, cv=5)                          # performs grid search to find the best number of neighbors
 perceptronModel.fit(x_train, y_train)                                                   # fits the model to the training data
 predictions = perceptronModel.predict(x_test)                                           # makes predictions on the test data
-print("\nBest Perceptron Parameters:", perceptronModel.best_params_)                    # prints the best parameters found by the grid search
+print("\n\nBest Perceptron Parameters:", perceptronModel.best_params_)                  # prints the best parameters found by the grid search
+print("###########################Grid Search###########################")
 print("Best Perceptron Score From Grid Search:", perceptronModel.best_score_ * 100, "%")# prints the best parameters found by the grid search
+print(classification_report(y_test, predictions), "\n")                                 # prints the classification report of the model
 
 
 ##Output best accuracy using best params##
@@ -53,4 +57,6 @@ bestPerceptronModel.fit(x_train, y_train)                                       
 bestPredictions = bestPerceptronModel.predict(x_test)                                   # makes predictions on the test data
 bestPerceptronAccuracy = accuracy_score(y_test, bestPredictions) * 100                  # calculates the accuracy of the model by comparing predected values to the known values
 
-print("\nPerceptron Accuracy Using Best Parameters:", bestPerceptronAccuracy, "%\n")     # prints the accuracy of the model
+print("###########################Best Parameters###########################")
+print("Perceptron Accuracy Using Best Parameters:", bestPerceptronAccuracy, "%\n")      # prints the accuracy of the model
+print(classification_report(y_test, bestPredictions), "\n\n")                           # prints the classification report of the model
