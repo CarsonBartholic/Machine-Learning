@@ -1,0 +1,94 @@
+# Executable files
+a.out
+a.exe
+main
+
+build/
+
+# Generated files
+*.o
+*-dist.tar.gz
+
+Thumbs.db
+.DS_Store
+core
+
+.vscode/
+
+# Generated documentation
+html/
+
+temp
+tmp
+
+# vscode
+*.code-workspace
+*.ipch
+*.log
+*.tlog
+*.lastbuildstate
+*.db
+.suo
+.vs
+*.idb
+Debug
+*.Identifier
+*.sln
+*.vcxproj*
+
+# Rust
+target
+
+*.zip
+*.lnk
+*.tar
+*.tgz
+*.tar.gz
+
+# Example files created on the fly
+TravelPlan
+Weather
+
+
+## OCaml
+
+*.annot
+*.cmo
+*.cma
+*.cmi
+*.a
+*.o
+*.cmx
+*.cmxs
+*.cmxa
+
+# ocamlbuild working directory
+_build/
+
+# ocamlbuild targets
+*.byte
+*.native
+
+# oasis generated files
+setup.data
+setup.log
+
+# Merlin configuring file for Vim and Emacs
+.merlin
+
+# Dune generated files
+*.install
+
+# Local OPAM switch
+_opam/
+
+.ipynb_checkpoints/
+Untitled.ipynb
+Untitled.*
+promises
+promises2
+
+vgcore.*
+
+wandb
+infer-out
