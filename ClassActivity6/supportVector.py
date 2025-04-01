@@ -61,7 +61,6 @@ print("Accuracy: ", accuracy_score(y_test, y_pred)*100, "%")
 print(classification_report(y_test, y_pred))
 
 
-
 # Test Results
 print("Test Results from ", len(y_pred), " samples")
 actualValues = y_test.to_numpy()                                                        # convert y_test to array of only values and no labels
