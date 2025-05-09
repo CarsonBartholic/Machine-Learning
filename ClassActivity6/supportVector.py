@@ -51,7 +51,7 @@ x_train, x_test, y_train, y_test = train_test_split(featureSelection, yVal, test
 
 
 # Support Vector Classifier
-svc = svm.SVC(kernel = 'rbf', C = 1, probability = True, gamma = 'scale')               # selecg parameters for SVC
+svc = svm.SVC(kernel = 'rbf', C = 1, probability = True, gamma = 'scale')               # select parameters for SVC
 svc.fit(x_train, y_train)                                                               # fit SVC to training data
 y_pred = svc.predict(x_test)                                                            # predict on test data
 
