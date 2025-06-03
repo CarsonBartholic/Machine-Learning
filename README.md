@@ -5,5 +5,6 @@ Virtual Environment
     python -m venv <environment_name>
     source <environment_name>/bin/activate
     pip install <package_name>
-    pip freeze -r requirements.txt
+    pip freeze > requirements.txt
+    pip install -r requirements.txt
     deactivate
